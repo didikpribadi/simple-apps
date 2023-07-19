@@ -4,6 +4,8 @@ services:
     build: .
     image: finestrike83/apps-didik:v1.0
     restart: always
+    env_file:
+      - .env
     ports:
       - "3000"
     volumes:
