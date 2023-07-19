@@ -8,5 +8,13 @@ services:
       - "3000"
     volumes:
       - app-data:/app/public/images
+  web:
+    build: ./nginx
+    image: finestrike83/web-proxy
+    restart: always
+    ports:
+    - "80:80"
+    depends_on:
+    - backend
 volumes:
   app-data:
