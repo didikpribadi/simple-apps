@@ -2,7 +2,7 @@ version: "3.9"
 services:
   backend:
     build: .
-    image: finestrike83/apps-didik:v2.0
+    image: finestrike83/apps-didik:v3.0
     restart: always
     env_file:
       - .env
