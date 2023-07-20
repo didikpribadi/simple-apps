@@ -21,7 +21,7 @@ pipeline {
                 }
                  stage('Code Review') {
                     steps {
-                        echo 'Code Review'
+                      sh 'sonar-scanner   -Dsonar.projectKey=project-didik   -Dsonar.sources=.   -Dsonar.host.url=http://10.23.2.2:9000   -Dsonar.login=sqp_970980f3a97d40438778cd6c6ed880154f4e9fb9'
                     }
             }
          }
