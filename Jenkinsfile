@@ -33,5 +33,11 @@ pipeline {
               sh 'docker compose build'
             }
         }
+
+        stage('Push Image') {
+            steps {
+              sh 'docker compose push'
+            }
+        }
     }
 }
